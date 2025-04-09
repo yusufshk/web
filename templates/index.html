@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome to the Flask App</h1>
+    {% if user %}
+        <p>Hello, {{ user[1] }}! (<a href="/logout">Logout</a>)</p>
+        <ul>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/change-password">Change Password</a></li>
+            <li><a href="/upload">Upload Image</a></li>
+            <li><a href="/gallery">View Gallery</a></li>
+            <li><a href="/post">Make a Post</a></li>
+        </ul>
+    {% else %}
+        <p><a href="/login">Login</a> or <a href="/signup">Sign Up</a></p>
+    {% endif %}
+</body>
+</html>
